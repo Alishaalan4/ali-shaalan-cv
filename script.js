@@ -10,26 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Download Resume button functionality
 document.querySelector('.download-cv').addEventListener('click', function() {
-    // Get the container element
-    const element = document.querySelector('.container');
-    
-    // Configure the PDF options
-    const opt = {
-        margin: 0.5,
-        filename: 'ali-shaalan-cv.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { 
-            scale: 2,
-            useCORS: true // Enable loading of external images
-        },
-        jsPDF: { 
-            unit: 'in', 
-            format: 'a4', 
-            orientation: 'portrait' 
-        }
-    };
-    // Generate and download the PDF
-    html2pdf().set(opt).from(element).save();
+    window.print();
 })
 // Add animation to skill bars on scroll
 const skillBars = document.querySelectorAll('.progress');
