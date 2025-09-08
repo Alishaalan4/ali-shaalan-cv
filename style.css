@@ -366,7 +366,7 @@ html {
 @media print {
     @page {
         size: A4;
-        margin: 0;
+        margin: 10mm;
     }
 
     body {
@@ -376,13 +376,14 @@ html {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
         color-adjust: exact !important;
+        font-size: 11pt !important;
     }
 
     .container {
         width: 100% !important;
         max-width: none !important;
         margin: 0 !important;
-        padding: 15mm !important;
+        padding: 10mm !important;
         box-shadow: none !important;
         display: flex !important;
         min-height: 0 !important;
@@ -392,16 +393,49 @@ html {
         width: 30% !important;
         background-color: #2c3e50 !important;
         color: white !important;
-        padding: 15mm !important;
+        padding: 10mm !important;
+        font-size: 10pt !important;
     }
 
     .main-content {
         width: 70% !important;
-        padding: 15mm !important;
+        padding: 10mm !important;
     }
 
     .download-cv {
         display: none !important;
+    }
+
+    /* Adjust text sizes for print */
+    h1 {
+        font-size: 18pt !important;
+    }
+
+    h2 {
+        font-size: 14pt !important;
+    }
+
+    h3 {
+        font-size: 12pt !important;
+    }
+
+    p, li {
+        font-size: 10pt !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Reduce spacing */
+    .timeline-item {
+        margin-bottom: 1rem !important;
+    }
+
+    .responsibilities li {
+        margin-bottom: 0.3rem !important;
+    }
+
+    .sidebar section {
+        margin-bottom: 1rem !important;
+        padding-bottom: 0.5rem !important;
     }
 
     .progress-bar, .progress {
@@ -420,6 +454,7 @@ html {
 
     .project-card {
         background: #f8f9fa !important;
+        padding: 1rem !important;
     }
 
     /* Ensure all background colors print */
@@ -440,4 +475,11 @@ html {
         print-color-adjust: exact !important;
         color-adjust: exact !important;
     }
+
+    /* Reduce profile image size for print */
+    .profile-img {
+        width: 150px !important;
+        height: 150px !important;
+    }
 }
+
